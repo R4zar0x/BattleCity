@@ -2,6 +2,7 @@
 
 #include <glad/glad.h>
 #include <string>
+#include <glm/mat4x4.hpp>
 
 namespace Renderer
 {
@@ -20,6 +21,8 @@ namespace Renderer
 		bool is_Compiled() const { return m_isCompiled; }
 		
 		void use() const;
+		void setInt(const std::string& name, const GLint value);
+		void setMatrix4(const std::string& name, const glm::mat4& matrix);
 
 	private:
 		bool m_isCompiled = false;
